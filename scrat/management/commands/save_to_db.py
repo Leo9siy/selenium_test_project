@@ -1,8 +1,8 @@
 from django.core.management import BaseCommand
 
-from scrat import utils
+from scrat.utils import save_to_db
 
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        utils.save_to_db()
+        save_to_db()

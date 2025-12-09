@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,6 +78,14 @@ DATABASES = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": os.getenv("POSTGRES_DB", "scratch"),
+    #     "HOST": os.getenv("POSTGRES_HOST", "localhost"),
+    #     "USER": os.getenv("POSTGRES_USER", "user"),
+    #     "PASSWORD": os.getenv("POSTGRES_PASSWORD", "password"),
+    #     "PORT": os.getenv("POSTGRES_PORT", 5432),
+    # }
 }
 
 
